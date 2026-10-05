@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Commander | Mistrel</title>
-<meta name="description" content="Commande Mistrel, paiement à la livraison.">
+<title>Parfums Femme | Mistrel</title>
+<meta name="description" content="Les parfums Mistrel aux univers féminins: floraux, fruités, gourmands.">
 <link rel="icon" type="image/svg+xml" href="/assets/homepage_logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,55 +53,10 @@
   <div class="drawer-body" data-cart-items></div>
   <div class="drawer-foot" data-cart-foot></div>
 </aside>
-<main><section><div class="wrap" data-checkout>
-  <div class="page-head"><span class="eyebrow">Paiement à la livraison</span><h1>Commander</h1>
-    <p class="lead">Pas de carte requise, vous payez le livreur en espèces.</p></div>
-  <div class="steps">
-    <span class="step-dot" data-dot><i>1</i> Vos infos</span>
-    <span class="step-dot" data-dot><i>2</i> Récapitulatif</span>
-    <span class="step-dot" data-dot><i>3</i> Confirmation</span>
-  </div>
-
-  <div data-step="infos"><div class="form-card">
-    <div class="grid-2">
-      <div class="field"><label for="co-name">Nom complet *</label><input id="co-name" autocomplete="name"><p class="err"></p></div>
-      <div class="field"><label for="co-phone">Téléphone *</label><input id="co-phone" type="tel" placeholder="0612345678" autocomplete="tel"><p class="err"></p></div>
-    </div>
-    <div class="grid-2">
-      <div class="field"><label for="co-city">Ville *</label><input id="co-city" autocomplete="address-level2"><p class="err"></p></div>
-      <div class="field"><label for="co-address">Adresse *</label><input id="co-address" placeholder="Rue, quartier..." autocomplete="street-address"><p class="err"></p></div>
-    </div>
-    <div class="cod-strip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v8H3zM14 10h4l4 4v1h-8z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg> On vous appelle pour confirmer avant l'envoi.</div>
-    <button class="btn btn-rose btn-block" data-to-recap>Continuer</button>
-  </div></div>
-
-  <div data-step="recap" style="display:none"><div class="checkout-grid">
-    <div class="form-card" style="margin:0;max-width:none">
-      <h3>Votre commande</h3>
-      <div data-recap-items style="display:grid;gap:1rem;margin:1.2rem 0"></div>
-      <h3>Vos infos</h3>
-      <p><strong data-recap-name></strong><br><span dir="ltr" data-recap-phone></span><br><span data-recap-addr></span></p>
-      <p class="err" data-order-error></p>
-      <div style="display:flex;gap:0.7rem;flex-wrap:wrap">
-        <button class="btn btn-ghost" data-back-infos>Retour</button>
-        <button class="btn btn-rose" style="flex:1" data-confirm>Confirmer la commande</button>
-      </div>
-    </div>
-    <aside class="summary"><h3>Récapitulatif</h3>
-      <div class="totals"><span>Total à payer à la livraison</span><span data-recap-total></span></div>
-      <p class="ship-note" style="margin-top:0.8rem">Livraison gratuite à partir de 200 dh.</p>
-    </aside>
-  </div></div>
-
-  <div data-step="done" style="display:none"><div class="confirm-box">
-    <div class="big-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
-    <p class="eyebrow">Commande confirmée</p>
-    <h2 class="serif">Merci !</h2>
-    <p class="lead">Votre commande <span class="order-num" data-order-num></span> est enregistrée.<br>
-    On vous appelle très vite pour confirmer, puis on l'envoie.<br>
-    Total à payer à la livraison: <strong data-order-total></strong></p>
-    <a class="btn btn-dark" href="/shop.html" style="margin-top:1rem">Continuer mes achats</a>
-  </div></div>
+<main><section><div class="wrap">
+  <div class="page-head"><span class="eyebrow">Collection</span><h1>Parfums Femme</h1><p class="lead">Les parfums Mistrel aux univers féminins: floraux, fruités, gourmands.</p><p class="lead" data-count></p></div>
+  <div class="grid products" data-product-grid data-filter="femme"></div>
+  <div style="text-align:center;margin-top:2.4rem"><a class="btn btn-ghost" href="/shop.html">Voir tous les produits</a></div>
 </div></section></main>
 <footer><div class="wrap">
   <div class="footer-grid">
@@ -130,7 +85,7 @@
 </div></footer>
 <script src="/js/site.js" defer></script>
 <script src="/js/cart.js" defer></script>
-<script src="/js/checkout.js" defer></script>
+<script src="/js/shop.js" defer></script>
 </body>
 </html>
 
