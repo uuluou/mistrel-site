@@ -42,9 +42,7 @@ section { padding: clamp(3rem, 8vw, 5.5rem) 0; }
   font-family: var(--sans);
   font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--rose); font-weight: 500; margin-bottom: 1rem;
-  display: flex; align-items: center; gap: 0.8rem;
 }
-.eyebrow::before { content: ''; width: 2.4rem; height: 1px; background: var(--rose); flex: none; }
 .lead { color: var(--taupe); font-size: clamp(1rem, 2.6vw, 1.15rem); max-width: 60ch; }
 
 .btn {
@@ -125,7 +123,6 @@ section { padding: clamp(3rem, 8vw, 5.5rem) 0; }
 }
 .hero-content { position: relative; z-index: 2; color: var(--pearl); padding: clamp(4rem, 10vw, 7rem) 0; width: 100%; }
 .hero .eyebrow { justify-content: center; }
-.hero .eyebrow::after { content: ''; width: 2.4rem; height: 1px; background: var(--rose); flex: none; }
 .hero h1 {
   font-size: clamp(2.4rem, 7.5vw, 4.6rem); text-transform: uppercase;
   letter-spacing: 0.1em; margin: 0 auto 1.2rem; max-width: 16ch;
@@ -365,7 +362,6 @@ footer ul a:hover { color: var(--rose); }
 /* ADMIN — tinted to the Nuit de Rose system */
 .admin-login { max-width: 420px; margin: 4rem auto; text-align: center; padding: 2.4rem 2rem; }
 .admin-login .eyebrow { margin-bottom: 0.4rem; justify-content: center; }
-.admin-login .eyebrow::after { content: ''; width: 2.4rem; height: 1px; background: var(--rose); flex: none; }
 .admin-login h1 { font-size: 1.9rem; margin: 0 0 0.4rem; }
 .admin-login-logo { width: 120px; height: auto; margin-bottom: 1.2rem; filter: brightness(0) invert(1); }
 .admin-login-sub { color: var(--taupe); font-size: 0.95rem; margin: 0 0 1.4rem; }
