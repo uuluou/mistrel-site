@@ -93,7 +93,7 @@
     const { cart } = C.totals();
     if (!cart.length && current === 0) {
       document.querySelector('[data-checkout]').innerHTML =
-        `<div class="empty-state"><p class="serif" style="font-size:1.6rem;color:var(--espresso)">Votre panier est vide</p>
+        `<div class="empty-state"><p class="serif" style="font-size:1.6rem;color:var(--pearl)">Votre panier est vide</p>
          <p>Ajoutez des produits avant de commander.</p>
          <a class="btn btn-dark" href="/shop.html" style="margin-top:1rem">Voir la boutique</a></div>`;
       return;

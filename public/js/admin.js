@@ -121,7 +121,7 @@
           <div class="field"><label>Stock (vide = illimité)</label><input name="stock" type="number" min="0" step="1" placeholder="Illimité"></div>
           <div class="field"><label>Images (principale + galerie)</label><input type="file" name="images" accept="image/*" multiple><div class="img-preview" data-prev></div></div>
           <p class="err" data-perr></p>
-          <button class="btn btn-gold" type="submit">Ajouter le produit</button>
+          <button class="btn btn-rose" type="submit">Ajouter le produit</button>
         </form></div>
       <h3>Catalogue (${prods.length} produits)</h3>
       <div style="overflow-x:auto"><table class="admin-table"><thead><tr>
@@ -188,7 +188,7 @@
         </div><small style="color:var(--muted)">Cliquez sur une image pour la retirer (elle se grise).</small></div>
         <div class="field"><label>Ajouter des images</label><input type="file" name="images" accept="image/*" multiple></div>
         <p class="err" data-eerr></p>
-        <div style="display:flex;gap:0.6rem"><button class="btn btn-gold" type="submit">Enregistrer</button>
+        <div style="display:flex;gap:0.6rem"><button class="btn btn-rose" type="submit">Enregistrer</button>
         <button class="btn btn-ghost" type="button" data-cancel>Annuler</button></div>
       </form></div>`;
     zone.scrollIntoView({ behavior: 'smooth' });
@@ -257,7 +257,7 @@
         ${fieldRow('Lien', 'col_' + i + '_href', col.href)}
         <p class="note">Image: /${esc(col.image)} (gérée dans les fichiers du site)</p></div>`).join('')}
       <p class="err" data-cerr></p>
-      <button class="btn btn-gold" type="submit">Enregistrer le contenu</button>
+      <button class="btn btn-rose" type="submit">Enregistrer le contenu</button>
     </form>`;
     body.querySelector('[data-cform]').addEventListener('submit', async e => {
       e.preventDefault();
@@ -280,7 +280,7 @@
         }));
         await putKey('collections', cols);
         content = await (await api('/api/content')).json();
-        err.style.color = 'var(--green)'; err.textContent = 'Contenu enregistré.';
+        err.style.color = 'var(--rose)'; err.textContent = 'Contenu enregistré.';
       } catch { err.textContent = 'Erreur lors de la sauvegarde.'; }
     });
   }
@@ -305,7 +305,7 @@
             <div class="field"><label>Titre *</label><input name="title" required></div>
             <div class="field"><label>Texte *</label><textarea name="text" rows="3" required></textarea></div>
             <p class="err" data-rerr></p>
-            <button class="btn btn-gold" type="submit">Ajouter</button></form></div>`;
+            <button class="btn btn-rose" type="submit">Ajouter</button></form></div>`;
       const save = k => putKey(k, content[k]).then(() => { render(); });
       body.querySelector('[data-rform]').addEventListener('submit', async e => {
         e.preventDefault();
@@ -329,7 +329,7 @@
           <div class="field"><label>Auteur</label><input name="author" value="${esc(r.author)}"></div>
           <div class="field"><label>Titre</label><input name="title" value="${esc(r.title)}"></div></div>
           <div class="field"><label>Texte</label><textarea name="text" rows="3">${esc(r.text)}</textarea></div>
-          <button class="btn btn-gold btn-sm" type="submit">Enregistrer</button></form>`;
+          <button class="btn btn-rose btn-sm" type="submit">Enregistrer</button></form>`;
         zone.querySelector('[data-reform]').addEventListener('submit', async e => {
           e.preventDefault();
           const fe = n => e.target.elements[n].value.trim();
@@ -355,7 +355,7 @@
           <form data-fform>
             <div class="field"><label>Question *</label><input name="q" required></div>
             <div class="field"><label>Réponse *</label><textarea name="a" rows="3" required></textarea></div>
-            <button class="btn btn-gold" type="submit">Ajouter</button></form></div>`;
+            <button class="btn btn-rose" type="submit">Ajouter</button></form></div>`;
       const save = () => putKey('faq', content.faq).then(() => render());
       body.querySelector('[data-fform]').addEventListener('submit', async e => {
         e.preventDefault();
@@ -373,7 +373,7 @@
         zone.innerHTML = `<form data-feform style="margin-top:0.8rem">
           <div class="field"><label>Question</label><input name="q" value="${esc(f.q)}"></div>
           <div class="field"><label>Réponse</label><textarea name="a" rows="3">${esc(f.a)}</textarea></div>
-          <button class="btn btn-gold btn-sm" type="submit">Enregistrer</button></form>`;
+          <button class="btn btn-rose btn-sm" type="submit">Enregistrer</button></form>`;
         zone.querySelector('[data-feform]').addEventListener('submit', async e => {
           e.preventDefault();
           content.faq[i] = { q: e.target.q.value.trim(), a: e.target.a.value.trim() };
@@ -395,7 +395,7 @@
       ${fieldRow('Texte bloc marque (footer)', 'brand_block_text', s.brand_block_text, 'textarea')}
       ${fieldRow('Mention copyright', 'copyright', s.copyright)}
       <p class="err" data-serr></p>
-      <button class="btn btn-gold" type="submit">Enregistrer</button></form>`;
+      <button class="btn btn-rose" type="submit">Enregistrer</button></form>`;
     body.querySelector('[data-sform]').addEventListener('submit', async e => {
       e.preventDefault();
       const f = e.target, err = body.querySelector('[data-serr]');
@@ -408,7 +408,7 @@
       };
       await putKey('settings', ns);
       content.settings = ns;
-      err.style.color = 'var(--green)'; err.textContent = 'Réglages enregistrés.';
+      err.style.color = 'var(--rose)'; err.textContent = 'Réglages enregistrés.';
     });
   }
 

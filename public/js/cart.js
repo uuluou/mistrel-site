@@ -70,7 +70,7 @@
     const th = getShipThreshold();
     if (cart.length === 0) {
       body.innerHTML = `<div class="cart-empty">
-        <p class="serif" style="font-size:1.4rem;color:var(--espresso)">Votre panier est vide</p>
+        <p class="serif" style="font-size:1.4rem;color:var(--pearl)">Votre panier est vide</p>
         <p>Découvrez nos gels douche parfumés.</p></div>`;
       if (foot) foot.style.display = 'none';
       return;
@@ -102,7 +102,7 @@
       <div class="ship-progress" style="margin-top:0.5rem"><i style="width:${pct}%"></i></div></div>
       <div class="totals"><span>Sous total</span><span>${money(total)}</span></div>
       <a class="btn btn-dark btn-block" href="/panier.html">Voir le panier</a>
-      <a class="btn btn-gold btn-block" href="/commande.html">Commander, paiement à la livraison</a>`;
+      <a class="btn btn-rose btn-block" href="/commande.html">Commander, paiement à la livraison</a>`;
     if (foot) foot.innerHTML = footHtml;
     body.querySelectorAll('[data-inc]').forEach(b => b.addEventListener('click', () => {
       const l = load().find(x => x.handle === b.dataset.inc); setQty(b.dataset.inc, (l ? l.qty : 0) + 1);
