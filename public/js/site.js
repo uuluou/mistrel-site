@@ -96,7 +96,7 @@
   function starRow() { return '★★★★★'; }
   function reviewCard(r) {
     const initial = (r.author || '?').trim().charAt(0).toUpperCase();
-    return `<article class="review reveal">
+    return `<article class="review reveal in">
       <div class="stars" aria-label="5 étoiles">${starRow()}</div>
       <h4>${esc(r.title || '')}</h4>
       <p>${esc(r.text || '')}</p>
